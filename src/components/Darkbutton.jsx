@@ -6,6 +6,11 @@ function Darkbutton() {
 
   // TASK 4: Implement the logic for changing the background and text color of the entire page.
   const toggleDarkMode = () => {
+    setIsDarkMode((prevMode)=>{
+      document.body.style.background=prevMode? "rgb(240,240,240)":"rgb(24,24,24)"
+      document.body.style.color=prevMode?  "rgb(0,0,0)":"rgb(240,240,240)"
+      return !prevMode
+    })
     // When dark mode is active, change background to black and text to white.
     // When light mode is active, change background to white and text to black.
   };
